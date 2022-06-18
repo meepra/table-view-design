@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/Helvetica.ttf");
+}
+*::-webkit-scrollbar {
+  -webkit-overflow-scrolling: touch;
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #dddddd;
+  margin-block: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #0093ff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #0095ffbd;
+}
+/* for firefox */
+@supports(scrollbar-color:#0093ff #dddddd ){
+  *{
+    scrollbar-width: 8px;
+    scrollbar-color: #0093ff #dddddd ;
+  }
+}
+
+.border_cust{
+  box-shadow: 0px 3px 30px #0000000f;
+}
+body {
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Helvetica;
+  color: #000000!important;
+}
+.table_wrapper {
+  width: 1199px;
+  height: 576px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 3px 30px #0000000f;
+}
+table{
+  margin-bottom: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 3px 30px #0000000f;
+}
+table,
+td,
+th {
+  border: none;
+}
+table th,
+table td {
+  height: 80px;
+  vertical-align: middle;
+}
+.img-custom {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: 1px solid #f8f8f9;
+}
+
+.btn_drop {
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 5px;
+  background-color: #383838;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.custom_action {
+  visibility: hidden;
+}
+.table tbody tr:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+.table tr:hover .custom_action {
+  visibility: visible;
+}
+.dropdown-menu {
+  padding-left: 15px;
+  width: 184px;
+  height: 222px;
+  box-shadow: 0px -13px 26px #00000029;
+  border-radius: 19px 0px 19px 19px;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+  background-color: transparent;
+}
+.dropdown-item {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.custom_action .dropdown-item i {
+  color: #0690fc;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.custom_action .dropdown-item span {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-check{
+  padding-left: 2.5em;
+}
+.table thead{
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+table  tr td:first-child .form-check {
+  position: fixed;
+
+}
+table tr td:nth-child(2) .imgbox  {
+  position: fixed;
+
+}
+
+/* ===============================Responsive for Mobile ====================== */
+@media (max-width:767px) {
+
+body {
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+html {
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  -webkit-overflow-scrolling: touch;
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0093ff;
+}
+.table-responsive{
+  overflow: unset;
+}
+.table{
+  box-shadow: none;
+}
+.border_cust{
+  padding: 10px;
+}
+.table_wrapper thead{
+  display: none;
+}
+.table_wrapper{
+  width: 100%;
+  background-color: #f8f8f8;
+  box-shadow: none;
+}
+.table tbody , .table tbody tr{
+  display: grid;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+.table tbody tr{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 30px #0000000F;
+}
+.table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+.table tbody tr td{
+  height: auto;
+  font-size: 14px;
+}
+.table tbody tr td:first-child{
+  display: none;
+}
+.custom_action{
+  visibility: visible;
+  position: static;
+ }
+.dropdown-menu.show{
+  position: fixed!important;
+  width: 100%;
+  inset:unset!important;
+  transform: unset!important;
+  bottom: 0px!important;
+  left: 0px!important;
+}
+.table tbody tr td:last-child{
+  position: absolute;
+  right: 20px;
+}
+.table tbody tr td:nth-child(2){
+  position: absolute;
+  right: 13px;
+  bottom: 19px;
+}
+.table>:not(caption)>*>* {
+  padding-bottom: 5px!important;
+}
+.table td{
+  padding-top: 5px!important;
+}
+.table tbody tr td::before{
+  content: attr(data-title);
+  z-index: 9;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 14px;
+}
+table tbody tr{
+  margin-bottom: 16px;
+  padding:18px 10px;
+}
+.dropdown-menu {
+  padding-left: 25px;
+  border-radius: 19px 19px 0px 0px;
+}
+}
